@@ -1,0 +1,23 @@
+{
+  "skill_name": "mcp-toolbox-sqlserver",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "tôi muốn setup mcp toolbox để query database Umbraco Engage của tôi trực tiếp từ Claude Code mà không cần viết PowerShell query thủ công. Database đang chạy SQL Server trên localhost, port 1433, tên database là UmbracoEngageV17_TestSite, user sa, password YourPassword@123",
+      "expected_output": "Claude should follow the schema-first workflow: create tools.yaml with list_tables and describe_table first, register the MCP server with underscore naming (not hyphen), remind user to restart VS Code, and warn about known pitfalls.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "help me connect Claude Code to my MSSQL dev database so I can query it without writing PowerShell. It's SQL Server running in a Docker container on localhost:1433, database name MyAppDb, credentials: user=dev, password=Dev@Pass123",
+      "expected_output": "Claude should download mcp-toolbox binary if needed, create tools.yaml with correct mssql source config including encrypt:disable, use underscore in server name, follow schema-first approach with list_tables before any business tools.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I just cloned the Umbraco Engage repo and got the TestSite running. Now I want to be able to ask Claude things like 'show me all campaign groups' or 'how many pageviews today' without copy-pasting SQL. How do I set this up?",
+      "expected_output": "Claude should recognize this as an mcp-toolbox setup task, explain what mcp-toolbox does, guide through the full setup with Umbraco Engage defaults, and end with working MCP tools for campaign groups and analytics queries.",
+      "files": []
+    }
+  ]
+}

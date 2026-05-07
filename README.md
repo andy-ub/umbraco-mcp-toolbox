@@ -1,6 +1,6 @@
 # mcp-toolbox-sqlserver
 
-A Claude Code skill that connects Claude directly to your SQL Server database during development.
+A Claude Code skill that connects Claude directly to your SQL Server database during development, built on [Google's MCP Toolbox for Databases](https://github.com/googleapis/mcp-toolbox).
 
 When building database-backed tools, you constantly need to verify what data is in the database — to confirm test data exists before smoke testing, explore table schemas before writing queries, or debug unexpected results against raw records. This skill removes the PowerShell step: Claude queries the database on your behalf, inline in the conversation where you're already working.
 

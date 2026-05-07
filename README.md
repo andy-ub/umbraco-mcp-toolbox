@@ -1,6 +1,8 @@
 # mcp-toolbox-sqlserver
 
-A Claude Code skill that sets up [Google's MCP Toolbox for Databases](https://github.com/googleapis/mcp-toolbox) for direct SQL Server access — so you can ask Claude things like *"show me all campaign groups"* or *"how many pageviews today"* without writing PowerShell or SQL manually.
+A Claude Code skill that connects Claude directly to your SQL Server database during development.
+
+When building database-backed tools, you constantly need to verify what data is in the database — to confirm test data exists before smoke testing, explore table schemas before writing queries, or debug unexpected results against raw records. This skill removes the PowerShell step: Claude queries the database on your behalf, inline in the conversation where you're already working.
 
 ## What it does
 
@@ -46,8 +48,9 @@ Server: localhost, port: 1433, database: UmbracoEngageV17_TestSite, user: sa
 **From a fresh Umbraco Engage clone:**
 ```
 I just cloned the Umbraco Engage repo and got the TestSite running.
-I want to ask Claude things like "show me all campaign groups" or "how many pageviews today"
-without copy-pasting SQL. How do I set this up?
+I want Claude to be able to check whether reporting tables are populated,
+explore the schema before I write queries, and spot-check data while I implement tools.
+How do I connect Claude to the database?
 ```
 
 **Generic project (non-Umbraco):**
@@ -107,7 +110,7 @@ Evaluated against 3 real-world prompts, each run with and without the skill.
 ## Files
 
 ```
-mcp-toolbox-sqlserver/
+umbraco-mcp-toolbox/
 ├── SKILL.md       ← skill instructions (read by Claude)
 ├── README.md      ← this file
 └── evals/

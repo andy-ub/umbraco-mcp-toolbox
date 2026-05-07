@@ -3,7 +3,7 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "tôi muốn setup mcp toolbox để query database Umbraco Engage của tôi trực tiếp từ Claude Code mà không cần viết PowerShell query thủ công. Database đang chạy SQL Server trên localhost, port 1433, tên database là UmbracoEngageV17_TestSite, user sa, password YourPassword@123",
+      "prompt": "I want to set up mcp toolbox to query my Umbraco Engage database directly from Claude Code without writing manual PowerShell queries. The database is running SQL Server on localhost, port 1433, database name UmbracoEngageV17_TestSite, user sa, password YourPassword@123",
       "expected_output": "Claude should follow the schema-first workflow: create tools.yaml with list_tables and describe_table first, register the MCP server with underscore naming (not hyphen), remind user to restart VS Code, and warn about known pitfalls.",
       "files": []
     },

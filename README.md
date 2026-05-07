@@ -73,7 +73,7 @@ Evaluated against 3 real-world prompts, each run with and without the skill.
 
 | Eval | with_skill | without_skill |
 |---|---|---|
-| 1 — Vietnamese user, Umbraco Engage | 8/8 ✅ | 4/8 |
+| 1 — Umbraco Engage, standard setup | 8/8 ✅ | 4/8 |
 | 2 — Docker MSSQL, generic project | 8/8 ✅ | 4/8 |
 | 3 — Umbraco natural language query | 8/8 ✅ | 5/8 ⚠️ |
 | **Pass rate** | **100%** | **48%** |
